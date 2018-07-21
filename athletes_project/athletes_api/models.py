@@ -45,6 +45,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 	is_staff = models.BooleanField(default=False)
 	college = models.CharField(max_length=255)
 	academic_year = models.CharField(max_length = 255)
+	#medications = models.CharField(max_length = 255)
 
 	objects = UserProfileManager()
 
