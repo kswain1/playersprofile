@@ -7,9 +7,9 @@ import django.db.models.deletion
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('athletes_api', '0002_userprofile_medications'),
-    ]
+    # dependencies = [
+    #     ('athletes_api', '0001_initial'),
+    # ]
 
     operations = [
         migrations.CreateModel(
