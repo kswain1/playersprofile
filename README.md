@@ -15,7 +15,7 @@ rest api for athletes player profiles data
 
 ***Response***
 
-'''json
+``` json
 
 [
   {"id":01,
@@ -43,5 +43,5 @@ rest api for athletes player profiles data
    "treatment":"Soak and ice knee until, and go through plyo excersises"
    }]
    
-  '''
+  ```
   
