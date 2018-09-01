@@ -41,5 +41,5 @@ rest api for athletes player profiles data
    "assessment":"Player is serious risk on injuring their tibular anterior",
    "treatment":"Soak and ice knee until, and go through plyo excersises"
    }]
-  json '''
+  '''
   
