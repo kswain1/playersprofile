@@ -46,6 +46,12 @@ rest api for athletes player profiles data
   ```
   ### List all players
   
+  *** Definition ***
+
+'Get /players/'
+
+### Definition
+  
   ``` json 
   [
     {"id":01,
@@ -69,4 +75,44 @@ rest api for athletes player profiles data
     "risk_score":3,
     },
   ]
+```
+### Post players emg data 
+
+*** Defintion ***
+
+'Post /players/<id>'
+  
+### Definition
+
+``` json
+[
+  {"name":"Kehlin Swain",
+  "age":22,
+  "profile_image":"www.hello.com/img",
+  "tib_anterior_lle":[1,2,4,5,6,9],
+  "tib_anterior_rle":[1,2,4,5,6,9],
+  "peroneals_rle":[1,2,3,4,5,9],
+  "peroneals_lle":[9,8,7,6,3],
+  "med_gastro_rle":[8,9,0,1,7],
+  "med_gastro_lle":[10,20,9,9,1],
+  "lat_gastro_rle":[12,32,90,3,2],
+  "lat_gastro_llt":[12,45,60,1,3],
+  }
+]
+```
+
+### Post players assessment data 
+
+*** Defintion ***
+
+'Post /assessment/<id>'
+  
+### Definition
+
+``` json
+[
+  {"assessment":"Hello this is my assessment of how the athlete is doing in his trials"
+   "treatment":"Your athlete will need to do x,y, and z to complete his next actions"
+  }
+]
 ```
