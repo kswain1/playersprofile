@@ -7,7 +7,7 @@ rest api for athletes player profiles data
 - Updating Admin site is very crucial 
 - adding mulitple projects is another key lesson learned.
 
-### List all players
+### Player Dashboard 
 
 *** Definition ***
 
@@ -20,8 +20,8 @@ rest api for athletes player profiles data
 [
   {"id":01,
    "name":"Lebron James",
-   "age":46,
-   "profile_img":'www.bin.com/lebronjames',
+   "age":36,
+   "profile_img":"www.bin.com/lebronjames",
    "injury_history":"Poor knees",
    "current_injury":"None available",
    "risk_score":3,
@@ -44,4 +44,29 @@ rest api for athletes player profiles data
    }]
    
   ```
+  ### List all players
   
+  ``` json 
+  [
+    {"id":01,
+    "name":"Lebron James",
+    "profile_img":"www.bin.com/lebronjames",
+    "risk_score":3,
+    },
+     {"id":02,
+    "name":"Lebron James",
+    "profile_img":"www.bin.com/lebronjames",
+    "risk_score":3,
+    },
+     {"id":03,
+    "name":"Lebron James",
+    "profile_img":"www.bin.com/lebronjames",
+    "risk_score":3,
+    },
+     {"id":04,
+    "name":"Kyle James",
+    "profile_img":"www.bin.com/lebronjames",
+    "risk_score":3,
+    },
+  ]
+```
