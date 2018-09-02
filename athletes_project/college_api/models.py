@@ -3,34 +3,38 @@ from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.models import BaseUserManager
 
-# Create your models here.
-class UserProfileManager(BaseUserManager):
-	"""Helps Django work with our customer user model."""
 
-	def create_user(self, email, name, password=None):
+#Create models here 
+class UserProfileManager(BaseUserManager):
+	""" Helps Django works with our customer user model"""
+
+	def create_user (self, email, name, password):
 		"""Creates a new user profile object."""
 
-		if not email: 
-			raise valueError('Users must have an email address.')
+		if not email:
+			raise ValueError('Users must have an email address')
 
 		email = self.normalize_email(email)
 		user = self.model(email=email, name=name)
 
+		#encrypts the password for us
 		user.set_password(password)
 		user.save(using=self._db)
 
 		return user
 
-	def create_superuser(self, email, name, password): 
-		"""creates and saves a new superuser with given details"""
+	def create_superuser(self, email, name, password):
+		"""Creates and saves a new superuser with given details"""
 
 		user = self.create_user(email, name, password)
+
 		user.is_superuser = True
 		user.is_staff = True
 
 		user.save(using=self._db)
 
 		return user
+
 
 
 
@@ -46,6 +50,8 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 	college = models.CharField(max_length=255)
 	academic_year = models.CharField(max_length = 255)
 	medications = models.CharField(max_length = 255)
+	profile_img = models.URLField()
+
 
 	objects = UserProfileManager()
 
@@ -66,16 +72,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 	def __str__(self):
 		"""django uses this when it needs to convert an object to a string"""
 
-		return self.email
+		return self.email 
 
-class ProfileFeedItem(models.Model):
-	"""Profile status updates"""
 
-	user_profile = models.ForeignKey('UserProfile',on_delete=models.CASCADE)
-	status_text = models.CharField(max_length=255)
-	created_on = models.DateTimeField(auto_now_add=True)
 
-	def __str__(self):
-		"""Return the model as a string"""
-
-		return self.status_text

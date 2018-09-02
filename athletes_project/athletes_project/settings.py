@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'athletes_api',
+    #'athletes_api',
+    'college_api',
     'rest_framework',
     'rest_framework.authtoken',
 
@@ -123,4 +124,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-AUTH_USER_MODEL = 'athletes_api.UserProfile'
+#AUTH_USER_MODEL = 'athletes_api.UserProfile'
+
+AUTH_USER_MODEL = 'college_api.UserProfile'
+

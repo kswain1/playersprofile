@@ -5,9 +5,9 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    # dependencies = [
-    #     ('athletes_api', '0003_auto_20180728_2325'),
-    # ]
+    dependencies = [
+        ('athletes_api', '0003_auto_20180728_2325'),
+    ]
 
     operations = [
         migrations.RenameModel(
